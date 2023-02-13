@@ -1,0 +1,435 @@
+/* TYPO MENU   */
+
+@media all and (max-width: 1230px){
+  .menu a{
+    font-size: 14px;
+  }
+
+}
+
+/* MENU BUERGER  */
+@media all and (max-width: 1200px){
+
+  body{
+    width: 100vw;
+
+  }
+   /* MENU BURGER*/
+  
+
+  #burger {
+    width:30px;
+    height:2px;
+    background:rgb(0, 0, 0);
+    display:inline-block;
+    position:relative;
+}
+
+
+  #burger::before,
+  #burger::after {
+    content:'';
+    width:30px;
+    height:2px;
+    background:rgb(0, 0, 0);
+    display:inline-block;
+    position:absolute;
+    transform-origin: center;
+    transition: all 0.3s ease;
+    
+}
+  #burger::before {
+    top:-7px;
+}
+  #burger::after {
+    top:7px;
+}
+
+/*  On utilise ses pseudo-éléments before et after pour créer les barres du haut et du bas. Nous avons donc là notre burger fermé. Quand nous cliquerons dessus, ce dernier prendra une classe .open.      */
+  #burger.open {
+    background:transparent; /* la barre du milieu disparait */
+}
+/* celles du haut et du bas s'inclinent pour former une croix */
+  #burger.open::before {
+    transform: rotate(45deg); 
+    top:0;
+}
+  #burger.open::after {
+    transform: rotate(-45deg);
+    top:0;
+}
+
+
+
+
+ .menuburgers {
+  background:rgb(255, 255, 255);
+  position:absolute;
+  width:100%;
+  left:0;
+  top:100%;
+  padding:10px 0;
+  transform:scaleY(0);
+  transform-origin:center top;
+  transition:all 0.3s ease;
+  z-index: 1;
+}
+
+.menuburgers.open {
+  transform:scaleY(1);
+  flex-direction: column;
+}
+.menuburgers li {
+  padding:10px 0;
+  text-align:center
+}
+
+a{
+  color:var(--dark-text);
+}
+
+nav{
+  position: relative;
+  
+}
+}
+/*  HEADER H1  */
+@media all and (max-width:600px){
+
+
+  .h1-dark{
+    font-size: 16px;
+    margin-left: 45px;
+    width: 200px;
+    bottom: 5vw;
+
+  }
+
+  .header img{
+    margin-bottom:20px ;
+  }
+  
+  .color-secondary-text{
+    color:var(--dark-text);
+   
+  }
+  
+
+}
+
+/* H2 COMMUN   */
+  
+@media all and (max-width: 600px){
+  .title{
+    font-size: 15px;
+    position: relative;
+    line-height: 30px;
+    
+  }
+  
+  .title::before 
+  {
+  content: ""; 
+  position: absolute; 
+  background-color:var(--secondary-color);
+  width:30px ;
+  height: 5px;
+  bottom: 0;
+  
+  }
+}
+
+
+
+/*  FONCTIONNEMENT   */
+@media all and (max-width:600px){
+  .functioning{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+   
+  }
+
+ 
+
+  
+    #functioning-anchor{
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+  
+  
+  
+    
+  
+
+  section.functioning{
+    margin: 0;
+  }
+
+  .right, .left{
+    min-width: 300px;
+    margin: auto;
+  }
+
+  .img-fonct, .mockup{
+    width: 100%;
+  }
+
+  .mockup{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .img-fonct{
+    margin-top: 20px;
+  }
+
+  .left{
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    
+    }
+
+    .dark{
+      font-size: 13px;
+      line-height: normal;
+    }
+
+    .icon-fonct{
+      margin-bottom: 10px;
+    }
+  
+/*PRESENTATION   */
+}
+@media all and (max-width:1200px){
+  .light-presentation{
+  font-size: 13px;
+  line-height: normal;
+  
+  }
+}
+
+@media all and (max-width:600px){
+  .light-presentation{
+  font-size: 13px;
+  line-height: normal;
+  width: 300px;
+  }
+  
+}
+
+/* PRESENTATION MARGE   */
+
+@media all and (max-width:600px){
+
+
+  #presentation-anchor{
+    margin-bottom: 10px;
+    top: 9%;
+    left: 45px;
+  }
+
+  
+
+}
+
+
+
+/*  ESSAYER   */
+
+@media all and (max-width: 600px){
+  .try img.img-try{
+    width: 100vw;
+    }
+    
+    .try{
+    width: 100vw;
+    position: relative;
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    }
+    
+    #try-anchor{
+    position:absolute;
+    top:20%;     
+    color:var(--light-text);
+    
+    
+    }
+    
+    
+    .icon-try{
+    position: absolute;
+    top:20%;
+    right:15% ;
+    width: 5vw;
+    }
+    
+    button.style-button {
+    position: absolute;
+    
+    }
+    
+    button.style-button {
+    display: inline-block;
+    background-color: #E3FFDE;
+    border-radius: 50px;
+    border: 1px  #E3FFDE;
+    color: #eeeeee;
+    text-align: center;
+    font-size: var(--font-m);
+    padding: 20px;
+    width: 180px;
+    height: 40px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    margin-top: 50px;
+    box-shadow:4px 4px 20px rgb(23, 22, 22);
+    }
+    
+    a.button{
+    text-decoration: none;
+    text-transform : uppercase;
+    font-size: var(--font-responsive);
+    line-height: normal;
+    
+    color: var(--secondary-text);
+    font-weight: 600;
+    margin: auto;
+    display: inherit;
+    }
+    
+    
+    
+    a.button:hover{
+    color:var(--secondary-color);
+    
+    
+    }
+
+
+   
+  
+  /* FOOTER  */
+  
+  footer{
+  height: 8vh;
+  width: 100%;
+  background-image: url("../img/footer.svg");
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 50px;
+  padding-left: 50px;
+  font-size: var(--font-responsive);
+  margin-top: 10px;
+  }
+  
+  .light-footer{
+  color: var(--light-text);
+  }
+  
+  .icon-footer{
+  width:3vw ;
+  }
+
+}
+
+ /* CONTACT */
+ @media all and (max-width: 1000px){
+ .contact{
+
+  width: 300px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin: auto;
+  /* margin-left: 50px;
+  margin-right: 50px; */
+  }
+
+  .conteneur-nom-mail{
+    display: flex;
+    flex-direction: column;
+   
+  }
+  #contact-anchor{
+  
+  
+  height:30px ;
+  }
+
+  .icon-contact{
+  width: 30px;
+  }
+
+  .container-contact{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10px;
+  margin-left: 10px;
+  
+  }
+  
+  .form-contact{
+  
+  margin-top: 10px;
+  
+  
+  }
+
+  
+  .nom input, .mail input, .message textarea{
+  background-color:#D9D9D9 ;
+  border:none;
+  font-size: 13px;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
+  }
+  
+  .nom input, .mail input{
+  height: 30px;
+  width: 300px;
+  margin:0;
+  margin-bottom: 10px;
+  }
+
+  .message textarea{
+  height: 195px;
+  padding: 15px 0px 0px 10px;
+  width: 380px;
+  margin-top: 10px;
+  }
+  
+  ::placeholder{
+  color:var(--dark-text);
+  
+  }
+  
+  .message{
+  display: flex;
+  justify-content: center;
+  }
+  
+  .button-contact{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  }
+  
+  .info{
+  margin-top: 10px;
+  font-size: 10px;
+  }
+  
+  .text-center{
+  display: flex;
+  justify-content: center;
+  }
+  
+}
