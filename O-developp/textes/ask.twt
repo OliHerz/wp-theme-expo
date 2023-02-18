@@ -1,0 +1,30 @@
+Je suis développeur web junior, je dois intégrer une site internet en Wordpress à partir du'ne maquette HTML et CSS déjà faite.
+Je dois créer un type de poste pour un article qui pourr être ajouté ou modifier par le futur administrateur du site Wordpress.
+Pour que l'administrateur puisse remplir l'article comme il le souhaite, mes professeurs m'ont dit d'utiliser ACF et de créer des champs personnalisés. Avec le code,  peux tu me montrer comment les créer, pour les rendre dynamiques et compatibles avec mon type de post (l'article en question) et comment les remplir 
+Ma structure HTML à intégrer ressemble à ca
+<article class="articleInfo"> 
+        <div class="headerArticle headerArticleConstruct">
+          <div class="insideTitleArticle">
+            <h2 class="titleArticle"> Construction 100% bois </h2>
+            <img src="<?php echo get_theme_file_uri('/img/icon_construc.svg')?>" alt="Logo constructions" class="iconArticleTitle">
+          </div>
+        </div>
+
+        <div class="contentArticle contentArticleMobile ">
+          <div class="insideCardSection">
+            <img src="<?php echo get_theme_file_uri('/img/nature_plus.svg') ?>" alt="Label Nature Plus" class="imageArticle">
+            <p class="textArticle">
+             du texte
+            </p>
+            </div>
+
+          <div class="insideCardSection constructRightContentMobile">
+            <p class="textArticle">
+             du texte
+            </p>
+            <img src="<?php echo get_theme_file_uri('./img/photo_mockup2.svg')?>" alt="Photo de stands" class="imageArticle">
+          </div>
+        </div>
+    </article>
+
+peux-tu me donner lescodes à rentrer dans mon thème Wordpress et ou les metter pour pouvoir rendre ce contenu dynamique ?
