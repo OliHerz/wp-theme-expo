@@ -1,0 +1,458 @@
+/*
+Theme Name: Page Builder Framework Child
+Theme URI: https://wp-pagebuilderframework.com
+Template: page-builder-framework
+Author: David Vongries
+Author URI: https://mapsteps.com
+Description: Page Builder Framework is a super fast, lightweight (less than 50kb on the frontend) and highly customizible WordPress theme made to work with all page builders such as Elementor, Beaver Builder, Visual Composer, SiteOrigin, Divi, Thrive Architect, Brizy and more. It can be daunting to look for the perfect theme to pair with the page builder you love. Page Builder Framework is the only theme that has been specifically created for Page Builders. It has been written from ground up with SEO in mind, is 100% Gutenberg compatible and follows the latest web standards (HTML5 and schema.org markup). With its minimalistic approach and lots of customization options in the WordPress customizer, it enables you to build almost any type of website such as a Blog, Portfolio website, Agency website or WooCommerce storefront. Agency owners and Developers love Page Builder Framework for its flexibility and extendability when it comes to building outstanding client websites. If you’re not a coder, don’t worry! With endless options in the WordPress customizer it’s the perfect fit for users at any skill level. Are you using a Page Builder and still looking for the perfect theme? Look no further.
+Tags: one-column,two-columns,left-sidebar,right-sidebar,custom-colors,custom-menu,featured-images,full-width-template,custom-logo,custom-background,threaded-comments,translation-ready,blog,news,e-commerce,theme-options,block-styles,wide-blocks
+Version: 2.10.2.1673616142
+Updated: 2023-01-13 14:22:22
+
+*/
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+:root{
+  --dark-text: #4E4A4A;
+  --light-text: #fff;
+  --secondary-text: #73C14A;
+
+  --secondary-color:#F0DD6C;
+  --secondary-color_bis:#73C14A;
+/* FONT SIZE    */
+  --font-responsive:1.2rem ;
+  --font-xs: 1.4rem; /*  */
+  --font-s: 1.6rem; /* texte */
+  --font-m: 2.4rem; /*   */
+  --font-l: 3.2rem;  /* h2  */
+  --font-xl: 3.6rem;
+  --font-xxl:4.8rem;
+
+
+}
+
+* {
+	margin: 0;  
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Verdana';
+}
+
+body{
+  width: 100%;
+}
+
+
+
+html{
+  font-size:62.5%;
+}
+/*MENU*/
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10vh;
+  margin-right: 10vh;
+  height: 13vw;
+  max-height: 100px;
+  /* margin-top: 3vh; */
+  align-items: center;
+  background-color: var(--light-text);
+}
+
+.menu {
+  display:flex;
+  padding:0;
+  justify-content:end;
+  align-items:center;
+  /* height: 10vh; */
+  
+}
+
+.menu li{
+  list-style-type:none;
+}
+
+
+  nav .logo img{
+    width: 8.5vw;
+    min-width: 89px;
+    
+  }
+
+  @media all and (max-width:600px){
+
+
+    nav {
+      margin-left: 35px;
+      margin-right: 35px;
+      height: 65px;
+      
+    }
+    
+  
+  }
+  
+  .menu a{
+  min-width: 120px;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 25px;
+  color: var(--dark-text);
+  font-size: var(--font-s);
+  text-transform: uppercase;
+  }
+
+  .menu a:hover{
+    color:var(--secondary-text);
+  }
+
+/*HEADER*/
+.taille-header{
+  display: flex;
+  justify-content: center;
+}
+.header img{
+  width: 90%;
+  margin-bottom: 6vh;
+  
+}
+
+.h1-dark {
+  width: 39vw;
+  color: var(--dark-text);
+  position: absolute;
+  bottom: 5vw;
+  margin-left: 10vh;
+  font-size: 2.5vw;
+  line-height: 4vw;
+}
+.header{
+  position: relative;
+}
+
+.color-secondary-text{
+  color:var(--secondary-text);
+ 
+}
+
+
+
+
+/*TITRES H2 PROPRIETES COMMUNES */
+
+.title{
+  font-size: 2.5vw;
+  position: relative;
+  line-height: 4vw;
+  
+}
+
+.title::before 
+{
+content: ""; 
+position: absolute; 
+background-color:var(--secondary-color);
+width:4.5vw ;
+height: 0.5vw;
+bottom: 0;
+
+}
+
+
+
+
+/* PRESENTATION  */
+
+.presentation{
+  position: relative;
+  width: 100%;
+  display: flex;    /* Pour centrer le texte p */
+  justify-content: center;
+}
+
+.presentation img{
+  width: 100%;
+}
+
+.light-presentation{   /* texte    */
+  position:absolute;
+  top: 30%;
+  color: var(--light-text);
+  width: 60vw;
+  height: 25vw;  /*  TEMPORAIRE A ENLEVER §§§§§§§§§   */
+  line-height: 1.8vw;
+  font-size: 1.2vw;
+  overflow: hidden;
+}
+
+
+
+#presentation-anchor{
+  position:absolute;
+  top:15%;     
+  left: 10vh;  
+  color:var(--light-text);
+ 
+}
+
+a.uppercase{
+  color:var(--light-text);
+  text-transform : uppercase;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+
+/* FONCTIONNEMENT*/
+.functioning{
+  display:flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  
+
+}
+
+
+
+/* Dans media queri faire une min widht des image ou de leurs 
+contenaire right et left        */
+
+.right, .left{
+  width: 35vw;
+}
+
+.img-fonct, .mockup{
+  width: 100%;
+}
+
+/* .left{
+  display: flex;
+  flex-direction: column;
+  flex-direction: column-reverse;
+  
+  } */
+
+.right{
+  margin-left: 4vw;
+}
+.left{
+  margin-right: 8vw;
+}
+
+#functioning-anchor{
+  margin-bottom: 40px;
+}
+
+.mockup{
+  margin-top: 40px;
+}
+
+.dark{   /*  texte   */
+  line-height: 2vw;
+  font-size:var(--font-s);
+}
+
+.icon-fonct{
+  margin-bottom: 30px;
+  width: 10vw;
+}
+
+
+/* ESSAYER  */
+
+.try img.img-try{
+  width: 100%;
+}
+
+.try{
+  width: 100%;
+  position: relative;
+  display: flex;   
+  justify-content: center;
+  align-items: center;
+}
+
+#try-anchor{
+  position:absolute;
+  top:30%;     
+  color:var(--light-text);
+
+ 
+}
+
+
+.icon-try{
+  position: absolute;
+  top:18%;
+  right:20% ;
+  width: 8vw;
+}
+
+button.style-button {
+  position: absolute;
+
+}
+
+button.style-button {
+  display: inline-block;
+  background-color: #E3FFDE;
+  border-radius: 50px;
+  border: 1px  #E3FFDE;
+  color: #eeeeee;
+  text-align: center;
+  font-size: var(--font-m);
+  padding: 20px;
+  width: 25vw;
+  min-width: 200px;
+  height: 7vw;
+  min-height: 60px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-top: 100px;
+  box-shadow:4px 4px 20px rgb(23, 22, 22);
+}
+
+a.button{
+  text-decoration: none;
+  text-transform : uppercase;
+  font-size: 1.5vw;
+  color: var(--secondary-text);
+  font-weight: 600;
+  margin: auto;
+  display: inherit;
+}
+
+a.button:hover{
+  color:var(--secondary-color);
+
+ 
+}
+
+
+
+
+/*CONTACT*/
+
+.contact{
+ 
+  width: 100%;
+  margin-bottom: 10vh;
+}
+#contact-anchor{
+  
+  /* top: 15%;  
+  
+  height:56px ; */
+}
+.icon-contact{
+  width: 6vw;
+  position: absolute;
+  right: 20px;
+  top: 0px;
+}
+.container-contact{
+  /* display: flex;
+  justify-content: space-between; */
+  margin-right: 10vh;
+  margin-left: 10vh;
+  position: relative;
+
+}
+
+.form-contact{
+
+  margin-top: 7vh;
+
+
+}
+.conteneur-nom-mail{
+  display: flex;
+  justify-content: center;
+}
+
+.nom input, .mail input, .message textarea{
+  background-color:#D9D9D9 ;
+  border:none;
+  font-size: var(--font-s);
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
+}
+
+.nom input, .mail input{
+  height: 50px;
+  padding-left: 10px;
+  width: 490px;
+}
+.nom input{
+  margin-right: 20px;
+}
+.mail input{
+  margin-left: 20px;
+}
+.message textarea{
+  height: 195px;
+  padding: 15px 0px 0px 10px;
+  width: 1020px;
+  margin-top: 40px;
+}
+
+::placeholder{
+  color:var(--dark-text);
+
+}
+
+.message{
+  display: flex;
+  justify-content: center;
+}
+
+.button-contact{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.info{
+  margin-top: 40px;
+}
+
+.text-center{
+  display: flex;
+  justify-content: center;
+}
+
+/*FOOTER */
+footer{
+  height: 13vh;
+  width: 100%;
+  background-image: url("../img/footer.svg");
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10vh;
+  padding-left: 10vh;
+  font-size: var(--font-s);
+}
+
+.light-footer{
+  color: var(--light-text);
+}
+
+.icon-footer{
+  width:3vw ;
+}
+
